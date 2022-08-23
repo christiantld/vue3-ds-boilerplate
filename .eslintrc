@@ -1,0 +1,42 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "plugin:vue/vue3-recommended",
+    "eslint:recommended",
+    "@vue/typescript/recommended",
+    "plugin:vuejs-accessibility/recommended",
+    "prettier",
+    "plugin:sonarjs/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2021
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    // not needed for vue 3
+    "vue/no-multiple-template-root": "off",
+    "max-len": [
+      "warn",
+      {
+        "code": 80,
+        "tabWidth": 2,
+        "comments": 80,
+        "ignoreComments": false,
+        "ignoreTrailingComments": true,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreRegExpLiterals": true
+      }
+    ]
+  }
+}
