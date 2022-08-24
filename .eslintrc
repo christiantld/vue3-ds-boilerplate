@@ -18,7 +18,12 @@
   "parserOptions": {
     "ecmaVersion": 2021
   },
-  "plugins": ["@typescript-eslint", "prettier", "testing-library"],
+  "plugins": [
+    "@typescript-eslint",
+    "prettier",
+    "testing-library",
+    "jest-dom"
+  ],
   "rules": {
     "prettier/prettier": "error",
     // not needed for vue 3
