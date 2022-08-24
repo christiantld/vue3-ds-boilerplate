@@ -8,7 +8,7 @@
   "extends": [
     "plugin:vue/vue3-recommended",
     "eslint:recommended",
-    "@vue/typescript/recommended",
+    "@vue/eslint-config-typescript",
     "plugin:vuejs-accessibility/recommended",
     "prettier",
     "plugin:sonarjs/recommended",
