@@ -12,7 +12,9 @@
 </script>
 
 <template>
-  <button @click="onClick">{{ label }}<slot /></button>
+  <button class="btn" @click="onClick">{{ label }}<slot /></button>
 </template>
 
-<style scoped></style>
+<style scoped lang="scss">
+  @import './MButton.module.scss';
+</style>
