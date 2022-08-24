@@ -1,7 +1,3 @@
 {
-  "src/**/*.{ts,vue}": [
-    "eslint --fix",
-    "vitest --passWithNoTests",
-    "prettier --write"
-  ]
+  "src/**/*.{ts,vue}": ["eslint --fix", "prettier --write"]
 }
