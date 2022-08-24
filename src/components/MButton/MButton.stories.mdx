@@ -1,0 +1,18 @@
+<!-- Button.stories.mdx-->
+
+import { Meta, Story } from '@storybook/addon-docs'
+
+import MButton from './MButton.vue'
+
+<Meta title="MButton" component={MButton} />
+
+# Button
+
+<Story name="Primary">
+  {() => {
+    return {
+      components: { MButton },
+      template: `<MButton primary label="Button" />`,
+    }
+  }}
+</Story>

@@ -2,10 +2,17 @@
   const onClick = () => {
     console.log('Mesa Desing System')
   }
+
+  defineProps({
+    label: {
+      type: String,
+      default: 'Mesa Desing System',
+    },
+  })
 </script>
 
 <template>
-  <button @click="onClick"><slot /></button>
+  <button @click="onClick">{{ label }}<slot /></button>
 </template>
 
 <style scoped></style>

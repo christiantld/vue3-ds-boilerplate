@@ -3,4 +3,4 @@
 
 
 npx --no-install lint-staged
-pnpm run unit:test --passWithNoTests --run
+yarn unit:test --passWithNoTests --run
