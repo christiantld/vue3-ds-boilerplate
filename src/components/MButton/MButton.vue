@@ -1,4 +1,6 @@
 <script setup lang="ts">
+  import styles from './MButton.module.css'
+
   const onClick = () => {
     console.log('Mesa Desing System')
   }
@@ -12,9 +14,7 @@
 </script>
 
 <template>
-  <button class="btn" @click="onClick">{{ label }}<slot /></button>
+  <button :class="styles.btn" @click="onClick">
+    <span>{{ label }}</span>
+  </button>
 </template>
-
-<style scoped lang="scss">
-  @import './MButton.module.scss';
-</style>
