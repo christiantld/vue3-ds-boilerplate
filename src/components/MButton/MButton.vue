@@ -1,20 +1,25 @@
 <script setup lang="ts">
+  import { computed } from 'vue'
   import styles from './MButton.module.css'
 
-  const onClick = () => {
-    console.log('Mesa Desing System')
+  type Props = {
+    label: string
+    primary?: boolean
   }
 
-  defineProps({
-    label: {
-      type: String,
-      default: 'Mesa Desing System',
-    },
+  const props = defineProps<Props>()
+
+  const btnStyle = computed(() => {
+    return props.primary ? styles.primary : styles.default
   })
+
+  function onClick() {
+    console.log('Mesa Design System')
+  }
 </script>
 
 <template>
-  <button :class="styles.btn" @click="onClick">
-    <span>{{ label }}</span>
+  <button :class="[styles.btn, btnStyle]" @click="onClick">
+    <span>{{ props.label }}</span>
   </button>
 </template>

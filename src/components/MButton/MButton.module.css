@@ -1,7 +1,15 @@
 .btn {
-  background-color: red;
-
+  border: none;
+  padding: 0.5rem 1rem;
   & span {
     color: white;
   }
+}
+
+.primary {
+  background-color: #00bcd4;
+}
+
+.default {
+  background-color: #e0e0e0;
 }
