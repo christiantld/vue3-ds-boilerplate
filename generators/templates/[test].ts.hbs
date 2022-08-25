@@ -1,0 +1,12 @@
+import {{pascalCase name}} from './{{pascalCase name}}.vue'
+import { render, screen } from '@testing-library/vue'
+import '@testing-library/jest-dom'
+
+describe('{{pascalCase name}}', () => {
+  it('should render', () => {
+    render({{pascalCase name}})
+
+    const title = screen.getByText("{{pascalCase name}}")
+    expect(title).toBeInTheDocument()
+  })
+})

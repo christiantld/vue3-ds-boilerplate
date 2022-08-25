@@ -1,0 +1,16 @@
+import { Meta, Story } from '@storybook/addon-docs'
+
+import {{pascalCase name}} from './{{pascalCase name}}.vue'
+
+<Meta title="{{pascalCase name}}" component={{surroundWithCurlyBrace name}} />
+
+# {{pascalCase name}}
+
+<Story name="Primary">
+  {() => {
+    return {
+      components: { {{pascalCase name}} },
+      template: `<{{pascalCase name}} />`,
+    }
+  }}
+</Story>
