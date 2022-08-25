@@ -4,16 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "start-storybook -p 6006",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview",
+    "build:storybook": "build-storybook",
     "lint": "eslint --ext .ts,.vue src",
     "format": "prettier src --write",
     "prepare": "husky install",
     "unit:test": "vitest",
-    "unit:cov": "vitest --coverage",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "unit:cov": "vitest --coverage"
   },
   "dependencies": {
     "@vueuse/core": "^9.1.1",
@@ -52,16 +50,18 @@
     "happy-dom": "^6.0.4",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
+    "postcss-preset-env": "^7.8.0",
     "prettier": "^2.7.1",
-    "sass": "^1.54.5",
     "typescript": "^4.6.4",
     "vite": "^3.0.7",
     "vite-plugin-eslint": "^1.8.1",
     "vitest": "^0.22.1",
-    "vue-loader": "^16.8.3",
     "vue-tsc": "^0.39.5"
   },
   "lint-staged": {
     "*.{ts,vue}": "eslint --fix"
-  }
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
 }
