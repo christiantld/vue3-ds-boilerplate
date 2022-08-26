@@ -1,69 +1,25 @@
 {
-  "name": "vue3-ds-boilerplate",
-  "private": true,
+  "name": "design-system",
   "version": "0.0.0",
-  "type": "module",
+  "private": true,
   "scripts": {
-    "dev": "start-storybook -p 6006",
-    "build": "vue-tsc --noEmit && vite build",
-    "build:storybook": "build-storybook",
-    "lint": "eslint --ext .ts,.vue src",
-    "format": "prettier src --write",
-    "prepare": "husky install",
-    "unit:test": "vitest",
-    "unit:cov": "vitest --coverage",
-    "generate": "plop --plopfile ./generators/plopfile.js"
-  },
-  "dependencies": {
-    "@vueuse/core": "^9.1.1",
-    "vue": "^3.2.37"
+    "prepare": "husky install"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.13",
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
-    "@storybook/addon-actions": "^6.5.10",
-    "@storybook/addon-essentials": "^6.5.10",
-    "@storybook/addon-interactions": "^6.5.10",
-    "@storybook/addon-links": "^6.5.10",
-    "@storybook/builder-vite": "^0.2.2",
-    "@storybook/testing-library": "^0.0.13",
-    "@storybook/vue3": "^6.5.10",
-    "@testing-library/dom": "^8.17.1",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/user-event": "^14.4.3",
-    "@testing-library/vue": "^6.6.1",
-    "@types/testing-library__jest-dom": "^5.14.5",
-    "@typescript-eslint/eslint-plugin": "^5.34.0",
-    "@typescript-eslint/parser": "^5.34.0",
-    "@vitejs/plugin-vue": "^3.0.3",
-    "@vue/eslint-config-prettier": "^7.0.0",
-    "@vue/eslint-config-typescript": "^11.0.0",
-    "babel-loader": "^8.2.5",
-    "eslint": "^8.22.0",
-    "eslint-plugin-jest-dom": "^4.0.2",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
-    "eslint-plugin-sonarjs": "^0.15.0",
-    "eslint-plugin-testing-library": "^5.6.0",
-    "eslint-plugin-vue": "^9.4.0",
-    "eslint-plugin-vuejs-accessibility": "^1.2.0",
-    "happy-dom": "^6.0.4",
     "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
-    "plop": "^3.1.1",
-    "postcss-preset-env": "^7.8.0",
-    "prettier": "^2.7.1",
-    "typescript": "^4.6.4",
-    "vite": "^3.0.7",
-    "vite-plugin-eslint": "^1.8.1",
-    "vitest": "^0.22.1",
-    "vue-tsc": "^0.39.5"
+    "lint-staged": "^13.0.3"
   },
-  "lint-staged": {
-    "*.{ts,vue}": "eslint --fix"
+  "workspaces": [
+    "config/**",
+    "packages/**"
+  ],
+  "eslintConfig": {
+    "extends": [
+      "@mesa/eslint-config"
+    ]
   },
-  "browserslist": [
-    "last 2 versions"
-  ]
+  "prettier": "@mesa/prettier-config",
+  "license": "MIT"
 }

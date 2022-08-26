@@ -1,4 +1,4 @@
 node_modules
 dist
-vite-env.d.ts
-src/**/*.spec.ts
+*.d.ts
+*.spec.ts
