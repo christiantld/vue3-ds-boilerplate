@@ -5,24 +5,13 @@
     "es2021": true,
     "node": true
   },
-  "extends": [
-    "plugin:vue/vue3-recommended",
-    "eslint:recommended",
-    "@vue/eslint-config-typescript",
-    "plugin:vuejs-accessibility/recommended",
-    "prettier",
-    "plugin:sonarjs/recommended",
-    "plugin:jest-dom/recommended",
-    "plugin:testing-library/vue"
-  ],
+  "extends": ["eslint:recommended", "prettier"],
+  "plugins": ["@typescript-eslint", "prettier", "testing-library", "jest-dom"],
   "parserOptions": {
     "ecmaVersion": 2021
   },
-  "plugins": ["@typescript-eslint", "prettier", "testing-library", "jest-dom"],
   "rules": {
     "prettier/prettier": "error",
-    // not needed for vue 3
-    "vue/no-multiple-template-root": "off",
     "max-len": [
       "warn",
       {

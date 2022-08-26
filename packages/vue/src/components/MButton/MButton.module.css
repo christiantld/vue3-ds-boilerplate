@@ -1,9 +1,10 @@
 .btn {
   border: none;
   padding: 0.5rem 1rem;
-  & span {
-    color: white;
-  }
+}
+
+.btn span {
+  color: white;
 }
 
 .primary {

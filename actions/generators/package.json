@@ -1,0 +1,13 @@
+{
+  "name": "@mesa/generators",
+  "version": "1.0.0",
+  "description": "Generators scripts for Mesa Design System",
+  "type": "module",
+  "scripts": {
+    "generate": "plop --plopfile ./src/plopfile.js"
+  },
+  "devDependencies": {
+    "plop": "^3.1.1"
+  },
+  "license": "MIT"
+}
