@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "generate": "yarn workspace @mesa/generators generate"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
@@ -12,6 +13,7 @@
     "lint-staged": "^13.0.3"
   },
   "workspaces": [
+    "actions/**",
     "config/**",
     "packages/**"
   ],

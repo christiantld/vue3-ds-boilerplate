@@ -10,8 +10,7 @@
     "lint": "eslint --ext .ts,.vue src",
     "format": "prettier src --write",
     "unit:test": "vitest",
-    "unit:cov": "vitest --coverage",
-    "generate": "plop --plopfile ./generators/plopfile.js"
+    "unit:cov": "vitest --coverage"
   },
   "dependencies": {
     "@vueuse/core": "^9.1.1",
@@ -34,7 +33,6 @@
     "@vitejs/plugin-vue": "^3.0.3",
     "babel-loader": "^8.2.5",
     "happy-dom": "^6.0.4",
-    "plop": "^3.1.1",
     "typescript": "^4.8.2",
     "vite": "^3.0.9",
     "vitest": "^0.22.1",
