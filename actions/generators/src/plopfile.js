@@ -15,28 +15,33 @@ export default function (
     actions: [
       {
         type: 'add',
-        path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.vue',
+        path: '../../../packages/vue/src/components/{{pascalCase name}}/{{pascalCase name}}.vue',
         templateFile: 'templates/[name].vue.hbs',
+        skipIfExists: true,
       },
       {
         type: 'add',
-        path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.spec.ts',
+        path: '../../../packages/vue/src/components/{{pascalCase name}}/{{pascalCase name}}.spec.ts',
         templateFile: 'templates/[test].ts.hbs',
+        skipIfExists: true,
       },
       {
         type: 'add',
-        path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.stories.mdx',
+        path: '../../../packages/vue/src/components/{{pascalCase name}}/{{pascalCase name}}.stories.mdx',
         templateFile: 'templates/[stories].mdx.hbs',
+        skipIfExists: true,
       },
       {
         type: 'add',
-        path: './../styles/components/{{pascalCase name}}.module.css',
+        path: '../../../packages/vue/src/components/{{pascalCase name}}/{{pascalCase name}}.module.css',
         templateFile: 'templates/[styles].css.hbs',
+        skipIfExists: true,
       },
       {
         type: 'add',
-        path: './../types/components/{{pascalCase name}}.ts',
+        path: '../../../packages/vue/src/components/{{pascalCase name}}/types.ts',
         templateFile: 'templates/[types].ts.hbs',
+        skipIfExists: true,
       },
     ],
   })
