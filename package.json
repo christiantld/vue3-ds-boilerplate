@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "prepare": "husky install",
-    "generate:component:vue": "yarn workspace @mesa/generators generate"
+    "generate": "yarn workspace @mesa/generators generate"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",

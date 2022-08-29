@@ -3,13 +3,13 @@ export default function (
   plop
 ) {
   // component generator
-  plop.setGenerator('component', {
+  plop.setGenerator('component:vue', {
     description: 'design system component logic',
     prompts: [
       {
         type: 'input',
         name: 'name',
-        message: 'please type the name of your new component',
+        message: 'please type the name of your new vue component',
       },
     ],
     actions: [
@@ -33,13 +33,13 @@ export default function (
       },
       {
         type: 'add',
-        path: '../../../packages/vue/src/components/{{pascalCase name}}/{{pascalCase name}}.module.css',
+        path: '../../../packages/styles/components/{{pascalCase name}}.module.css',
         templateFile: 'templates/[styles].css.hbs',
         skipIfExists: true,
       },
       {
         type: 'add',
-        path: '../../../packages/vue/src/components/{{pascalCase name}}/types.ts',
+        path: '../../../packages/types/components/{{pascalCase name}}.ts',
         templateFile: 'templates/[types].ts.hbs',
         skipIfExists: true,
       },
