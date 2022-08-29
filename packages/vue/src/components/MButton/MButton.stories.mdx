@@ -8,11 +8,20 @@ import MButton from './MButton.vue'
 
 # Button
 
-<Story name="Primary">
-  {() => {
-    return {
-      components: { MButton },
-      template: `<MButton primary label="Button" />`,
-    }
+export const Template = (args) => ({
+  components: { MButton },
+  setup() {
+    return { args }
+  },
+  template: `
+    <MButton v-bind="args">`,
+})
+
+<Story
+  name="Primary"
+  args={{
+    label: 'Button',
   }}
+>
+  {Template.bind({})}
 </Story>
