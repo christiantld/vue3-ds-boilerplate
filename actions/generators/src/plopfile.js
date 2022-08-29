@@ -3,40 +3,45 @@ export default function (
   plop
 ) {
   // component generator
-  plop.setGenerator('component', {
+  plop.setGenerator('component:vue', {
     description: 'design system component logic',
     prompts: [
       {
         type: 'input',
         name: 'name',
-        message: 'please type the name of your new component',
+        message: 'please type the name of your new vue component',
       },
     ],
     actions: [
       {
         type: 'add',
-        path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.vue',
+        path: '../../../packages/vue/src/components/{{pascalCase name}}/{{pascalCase name}}.vue',
         templateFile: 'templates/[name].vue.hbs',
+        skipIfExists: true,
       },
       {
         type: 'add',
-        path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.spec.ts',
+        path: '../../../packages/vue/src/components/{{pascalCase name}}/{{pascalCase name}}.spec.ts',
         templateFile: 'templates/[test].ts.hbs',
+        skipIfExists: true,
       },
       {
         type: 'add',
-        path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.stories.mdx',
+        path: '../../../packages/vue/src/components/{{pascalCase name}}/{{pascalCase name}}.stories.mdx',
         templateFile: 'templates/[stories].mdx.hbs',
+        skipIfExists: true,
       },
       {
         type: 'add',
-        path: './../styles/components/{{pascalCase name}}.module.css',
+        path: '../../../packages/styles/components/{{pascalCase name}}.module.css',
         templateFile: 'templates/[styles].css.hbs',
+        skipIfExists: true,
       },
       {
         type: 'add',
-        path: './../types/components/{{pascalCase name}}.ts',
+        path: '../../../packages/types/components/{{pascalCase name}}.ts',
         templateFile: 'templates/[types].ts.hbs',
+        skipIfExists: true,
       },
     ],
   })
