@@ -1,0 +1,16 @@
+import { Meta, Story } from '@storybook/addon-docs'
+
+import Chris from './Chris.vue'
+
+<Meta title="Chris" component={Chris} />
+
+# Chris
+
+<Story name="Primary">
+  {() => {
+    return {
+      components: { Chris },
+      template: `<Chris />`,
+    }
+  }}
+</Story>
