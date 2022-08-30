@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { computed } from 'vue'
-  import styles from './MButton.module.css'
+  import styles from '@mesa/styles/components/MButton.module.css'
 
   type Props = {
     label: string
