@@ -1,8 +1,0 @@
-/*
-  Add component styles here
-*/
-
-.chris {
-  @apply bg-red-300 w-64 h-20 text-green-600;
-  color: blue;
-}
