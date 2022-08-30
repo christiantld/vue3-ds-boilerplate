@@ -4,13 +4,18 @@
 
   type Props = {
     label: string
-    primary?: boolean
+    variant: 'primary' | 'secondary' | 'tertiary' | 'default'
+    size: 'sm' | 'md' | 'lg' | 'full'
+    disabled: boolean
   }
 
   const props = defineProps<Props>()
 
+  // do not take it seriously. It is just a poorly demo
   const btnStyle = computed(() => {
-    return props.primary ? styles.primary : styles.default
+    return `${styles[props.variant]} ${styles[props.size]} ${
+      props.disabled ? styles.disabled : ''
+    }`
   })
 
   function onClick() {
@@ -19,7 +24,7 @@
 </script>
 
 <template>
-  <button :class="[styles.btn, btnStyle]" @click="onClick">
+  <button :class="[btnStyle, styles.btn]" @click="onClick">
     <span>{{ props.label }}</span>
   </button>
 </template>

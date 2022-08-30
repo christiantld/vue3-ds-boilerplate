@@ -1,11 +1,40 @@
 .btn {
-  @apply hover:-translate-y-1 hover:shadow-lg transition ease-in-out duration-200 border-none px-4 py-2;
+  @apply hover:-translate-y-0.5 transition ease-in-out 
+  duration-200 border-none active:translate-y-0.5 active:shadow-md;
 }
 
 .primary {
+  @apply bg-emerald-400 text-white;
+}
+
+.secondary {
   @apply bg-cyan-500 text-white;
+}
+
+.tertiary {
+  @apply bg-violet-600 text-white;
 }
 
 .default {
   @apply bg-gray-500 text-white;
+}
+
+.disabled {
+  @apply cursor-not-allowed opacity-50 hover:transform-none;
+}
+
+.sm {
+  @apply px-2 py-1 text-sm;
+}
+
+.md {
+  @apply px-4 py-2 text-base;
+}
+
+.lg {
+  @apply px-6 py-4 text-lg;
+}
+
+.full {
+  @apply w-full py-4 text-lg;
 }
