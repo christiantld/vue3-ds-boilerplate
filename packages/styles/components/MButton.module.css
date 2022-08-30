@@ -1,5 +1,5 @@
 .btn {
-  @apply hover:-translate-y-0.5 transition ease-in-out 
+  @apply hover:-translate-y-0.5 transition ease-in-out
   duration-200 border-none active:translate-y-0.5 active:shadow-md;
 }
 

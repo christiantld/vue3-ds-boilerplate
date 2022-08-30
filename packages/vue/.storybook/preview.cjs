@@ -1,4 +1,5 @@
-import '../main.css';
+import '@mesa/styles'
+
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
