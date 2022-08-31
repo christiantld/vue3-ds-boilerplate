@@ -19,8 +19,24 @@ export const Template = (args) => ({
 
 <Story
   name="Primary"
+  argTypes={{
+    variant: {
+      options: ['primary', 'secondary', 'tertiary', 'default'],
+      control: { type: 'radio' },
+    },
+    size: {
+      options: ['sm', 'md', 'lg', 'full'],
+      control: { type: 'select' },
+    },
+    disabled: {
+      control: { type: 'boolean' },
+    },
+  }}
   args={{
     label: 'Button',
+    variant: 'primary',
+    disabled: false,
+    size: 'md',
   }}
 >
   {Template.bind({})}
