@@ -1,0 +1,8 @@
+# These files should have specific line endings
+# https://help.github.com/articles/dealing-with-line-endings/
+*.sh  text eol=lf
+*.bat text eol=crlf
+
+# Prevent analysis of language on those folders
+.husky/** linguist-vendored
+.storybook/** linguist-vendored
